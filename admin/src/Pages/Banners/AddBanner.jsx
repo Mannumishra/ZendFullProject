@@ -32,7 +32,7 @@ const AddBanner = () => {
 
         setIsLoading(true);
         try {
-            const res = await axios.post('http://localhost:8000/api/banner', formData);
+            const res = await axios.post('https://api.zenshealthcare.co.in/api/banner', formData);
             if (res.status === 200) {
                 // navigate = ("/all-banners")
                 toast.success(res.data.message);
