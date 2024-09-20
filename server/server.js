@@ -51,6 +51,6 @@ app.use("/api", Contactrouter);
 connectDb();
 
 // Start the server
-app.listen(8000, () => {
-    console.log("Server is running at 8000 Port");
+app.listen(process.env.PORT, () => {
+    console.log(`Server is running at ${process.env.PORT} Port`);
 });
