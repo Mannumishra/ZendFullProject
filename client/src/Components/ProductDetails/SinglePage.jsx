@@ -165,19 +165,24 @@ const SinglePage = () => {
             <p><strong>Net Quantity</strong> : {singleData.productQuantity}</p>
             <p>{singleData.productDescription}</p>
             <p dangerouslySetInnerHTML={{ __html: singleData.productDetails }}></p>
+           {
+            singleData.productType === "Shop"   ?
             <div className="quantity-control">
-              <button className="quantity-button" onClick={() => qty > 1 ? setQty(qty - 1) : ""}>-</button>
-              <p className="quantity-display">{qty}</p>
-              <button className="quantity-button" onClick={() => setQty(qty + 1)}>+</button>
-            </div>
-            <div className='action-buttons'>
-              <button className="cart-button" onClick={addToCart}>
-                <i className="fa fa-shopping-bag"></i> Add to cart
-              </button>
-              <button className="buy-now-button" onClick={handleBuyNow}>
-                <i className="fa fa-shopping-bag"></i> Buy Now
-              </button>
-            </div>
+            <button className="quantity-button" onClick={() => qty > 1 ? setQty(qty - 1) : ""}>-</button>
+            <p className="quantity-display">{qty}</p>
+            <button className="quantity-button" onClick={() => setQty(qty + 1)}>+</button>
+          </div> :null
+           }
+            {
+              singleData.productType === "Shop" ? <div className='action-buttons'>
+                <button className="cart-button" onClick={addToCart}>
+                  <i className="fa fa-shopping-bag"></i> Add to cart
+                </button>
+                <button className="buy-now-button" onClick={handleBuyNow}>
+                  <i className="fa fa-shopping-bag"></i> Buy Now
+                </button>
+              </div> : null
+            }
           </div>
         </div>
       </div>
