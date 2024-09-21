@@ -4,8 +4,8 @@ const crypto = require('crypto');
 const { transporter } = require('../utils/mailTransporter');
 
 const razorpay = new Razorpay({
-    key_id: process.env.RAZORPAY_API_KEY || "rzp_test_XPcfzOlm39oYi8",
-    key_secret: process.env.RAZORPAY_API_SECRET || "Q79P6w7erUar31TwW4GLAkpa",
+    key_id: process.env.RAZORPAY_API_KEY || "rzp_live_1R3bvuk5Z7QUIO",
+    key_secret: process.env.RAZORPAY_API_SECRET || "r1wKJKT439YoI0vE7CPfmeed",
 });
 
 const createCheckout = async (req, res) => {
@@ -127,7 +127,7 @@ const verifyPayment = async (req, res) => {
         const { razorpay_payment_id, razorpay_order_id, razorpay_signature } = req.body;
 
         // Create HMAC with your Razorpay API Secret
-        const hmac = crypto.createHmac('sha256', process.env.RAZORPAY_API_SECRET || "Q79P6w7erUar31TwW4GLAkpa");
+        const hmac = crypto.createHmac('sha256', process.env.RAZORPAY_API_SECRET || "r1wKJKT439YoI0vE7CPfmeed");
         hmac.update(razorpay_order_id + '|' + razorpay_payment_id);
         const generatedSignature = hmac.digest('hex');
 

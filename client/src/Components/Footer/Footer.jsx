@@ -17,9 +17,9 @@ const Footer = () => {
                         </div>
                         <div className="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                             <h5 className="mb-4">Get In Touch</h5>
-                            <p><i className="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                            <p><i className="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                            <p><i className="fa fa-envelope me-3"></i>info@example.com</p>
+                            <p><i className="fa fa-map-marker-alt me-3"></i>SHOP NO-10 GROUND FLOOR PROPERTY NO B-5,DDA MARKET,YAMUNA VIHAR DELHI-110053</p>
+                            <p><i className="fa fa-phone-alt me-3"></i>+91 95555 55122</p>
+                            <p><i className="fa fa-envelope me-3"></i>Zenshealthcare@gmail.com</p>
                             <div className="d-flex pt-2">
                                 <a className="btn btn-square btn-outline-primary me-1" href=""><i className="fab fa-twitter"></i></a>
                                 <a className="btn btn-square btn-outline-primary me-1" href=""><i className="fab fa-facebook-f"></i></a>
@@ -43,7 +43,7 @@ const Footer = () => {
                             <Link className="btn btn-link" to="/term&condition">Terms & Condition</Link>
                             <Link className="btn btn-link" to="/return&refund">Return & Refund Policy</Link>
                             <Link className="btn btn-link" to="/blog">Blog</Link>
-                            <Link className="btn btn-link" to="/testimonial">Testimonial</Link>
+                            {/* <Link className="btn btn-link" to="/testimonial">Testimonial</Link> */}
                         </div>
                     </div>
                 </div>

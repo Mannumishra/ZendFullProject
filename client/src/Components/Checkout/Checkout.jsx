@@ -102,7 +102,7 @@ const Checkout = () => {
             const amountInPaise = Math.round(amount);
         
             const options = {
-                key: 'rzp_test_XPcfzOlm39oYi8', // Replace with your Razorpay key
+                key: 'rzp_live_1R3bvuk5Z7QUIO', // Replace with your Razorpay key
                 amount: amountInPaise.toString(), // Ensure amount is a string representation of an integer
                 currency: currency,
                 name: 'Your Company Name',

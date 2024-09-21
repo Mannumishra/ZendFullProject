@@ -121,7 +121,7 @@ const Product = () => {
                                                     <small className="fa fa-star text-warning"></small>
                                                     <small>(99)</small>
                                                 </div>
-                                                <Link className="btn btn-outline-primary px-3" to={`/details/${item._id}`}>See Details</Link>
+                                                <Link className="btn btn-outline-primary px-3" to={`/product`}>See Details</Link>
                                             </div>
                                         </Link>
                                     </div>

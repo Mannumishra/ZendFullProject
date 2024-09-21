@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import Newsletter from '../Newsletter/Newsletter'
-import image from '../../Images/WhatsApp Image 2024-08-05 at 12.53.23.jpeg'
+import image from '../../Images/zensshow.png'
 
 const Feauture = () => {
     const location = window.location.pathname

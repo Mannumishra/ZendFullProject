@@ -2,22 +2,23 @@ import React, { useEffect } from 'react';
 import './PrivacyPolicy.css';
 
 const PrivacyPolicy = () => {
-  useEffect(()=>{
+  useEffect(() => {
     window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    })
-},[])
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, []);
+
   return (
     <div className="privacy-policy-container">
       <div className="header">
-        <h1>Privacy Policy for HAPS</h1>
+        <h1>Privacy Policy for Zens Health Care</h1>
       </div>
 
       <div className="section">
         <h2>Introduction</h2>
         <p>
-          Welcome to HAPS. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice or our practices with regard to your personal information, please contact us.
+          Welcome to Zens Health Care. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice or our practices with regard to your personal information, please contact us.
         </p>
       </div>
 
@@ -52,9 +53,9 @@ const PrivacyPolicy = () => {
       <div className="section">
         <h2>Contact Us</h2>
         <p>
-          If you have questions or comments about this policy, you may email us at support@haps.com or by post to:
+          If you have questions or comments about this policy, you may email us at support@zenshealthcare.com or by post to:
           <br />
-          HAPS
+          Zens Health Care
           <br />
           [Your Company Address]
         </p>

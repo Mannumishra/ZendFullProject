@@ -70,7 +70,7 @@ const Contact = () => {
                                 <div className="border py-5 px-3">
                                     <i className="fa fa-map-marker-alt fa-3x text-dark mb-4"></i>
                                     <h5 className="text-white">Office Address</h5>
-                                    <h5 className="fw-light text-white">123 Street, New York, USA</h5>
+                                    <h5 className="fw-light text-white">SHOP NO-10 GROUND FLOOR PROPERTY NO B-5,DDA MARKET,YAMUNA VIHAR DELHI-110053</h5>
                                 </div>
                             </div>
                         </div>
@@ -79,7 +79,7 @@ const Contact = () => {
                                 <div className="border py-5 px-3">
                                     <i className="fa fa-phone-alt fa-3x text-dark mb-4"></i>
                                     <h5 className="text-white">Call Us</h5>
-                                    <h5 className="fw-light text-white">+012 345 67890</h5>
+                                    <h5 className="fw-light text-white">+91 95555 55122</h5>
                                 </div>
                             </div>
                         </div>
@@ -88,7 +88,7 @@ const Contact = () => {
                                 <div className="border py-5 px-3">
                                     <i className="fa fa-envelope fa-3x text-dark mb-4"></i>
                                     <h5 className="text-white">Mail Us</h5>
-                                    <h5 className="fw-light text-white">info@example.com</h5>
+                                    <h5 className="fw-light text-white">Zenshealthcare@gmail.com</h5>
                                 </div>
                             </div>
                         </div>
