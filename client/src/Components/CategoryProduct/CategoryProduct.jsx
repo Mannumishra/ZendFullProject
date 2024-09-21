@@ -1,32 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 
-const Product = () => {
+const CategoryProduct = () => {
     const location = window.location.pathname;
 
-    const [categories, setCategories] = useState([]);
-    const [category, setCategory] = useState('All');
+    const { categoryName } = useParams()
     const [products, setProducts] = useState([]);
     const [visibleProducts, setVisibleProducts] = useState(4);
     const [hasMore, setHasMore] = useState(true);
 
-    // Fetch categories
-    const getCategories = async () => {
-        try {
-            const res = await axios.get("http://localhost:8001/api/category");
-            if (res.status === 200) {
-                setCategories(res.data.data);
-            }
-        } catch (error) {
-            console.error("Error fetching categories:", error);
-        }
-    };
-
     // Fetch products
     const getProducts = async () => {
         try {
-            const res = await axios.get("http://localhost:8001/api/products");
+            const res = await axios.get("http://localhost:8001/api/products/category/" + categoryName);
             if (res.status === 200) {
                 setProducts(res.data.data);
                 if (res.data.data.length <= 4) {
@@ -39,18 +26,15 @@ const Product = () => {
     };
 
     useEffect(() => {
-        getCategories();
         getProducts();
     }, []);
 
-    // Filter products based on category
-    const filterData = category === 'All' ? products : products.filter((item) => item.category === category);
 
     // Handle load more products
     const loadMoreProducts = () => {
         setVisibleProducts(prevVisible => {
             const newVisible = prevVisible + 4;
-            if (newVisible >= filterData.length) {
+            if (newVisible >= products.length) {
                 setHasMore(false);
             }
             return newVisible;
@@ -91,35 +75,10 @@ const Product = () => {
                         <p className="mb-5">Our natural medicines provide effective and holistic solutions for your health, using organic ingredients to support your well-being and vitality.</p>
                     </div>
 
-                    {/* Category Filter */}
-                    <div className="row mb-4">
-                        <div className="col-md-9"></div>
-                        <div className="col-md-3">
-                            <div className="filter-section">
-                                <div className="mb-1">
-                                    <label htmlFor="category" className="form-label">Category</label>
-                                    <select
-                                        className="form-control"
-                                        id="category"
-                                        value={category}
-                                        onChange={(e) => setCategory(e.target.value)}
-                                    >
-                                        <option value="All">All</option>
-                                        {categories.map((cat, index) => (
-                                            <option key={index} value={cat.name}>
-                                                {cat.name}
-                                            </option>
-                                        ))}
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <div className="row g-4">
                         <div className="col-md-12">
                             <div className="row g-4">
-                                {filterData.slice(0, visibleProducts).map((item, index) => (
+                                {products.slice(0, visibleProducts).map((item, index) => (
                                     <div className="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s" key={index}>
                                         <div className="product-item text-center border h-100 p-4">
                                             <img className="img-fluid mb-4" src={item.productImage[0]} alt={item.name} />
@@ -159,4 +118,4 @@ const Product = () => {
     );
 };
 
-export default Product;
+export default CategoryProduct;

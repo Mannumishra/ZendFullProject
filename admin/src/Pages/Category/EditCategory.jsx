@@ -17,7 +17,7 @@ const EditCategory = () => {
         // Fetch category data by ID to populate the form fields
         const fetchCategoryData = async () => {
             try {
-                const res = await axios.get(`https://api.zenshealthcare.co.in/api/category/${_id}`);
+                const res = await axios.get(`http://localhost:8001/api/category/${_id}`);
                 console.log(res)
                 setData(res.data.data);
             } catch (error) {
@@ -48,7 +48,7 @@ const EditCategory = () => {
         }
         setBtnLoading(true);
         try {
-            const res = await axios.put(`https://api.zenshealthcare.co.in/api/category/${_id}`, formData);
+            const res = await axios.put(`http://localhost:8001/api/category/${_id}`, formData);
             if (res.status === 200) {
                 setBtnLoading(false);
                 toast.success('Category updated successfully');

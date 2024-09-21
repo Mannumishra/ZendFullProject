@@ -13,7 +13,7 @@ const AddProduct = () => {
 
     const getProductCategory = async () => {
         try {
-            const res = await axios.get("https://api.zenshealthcare.co.in/api/category");
+            const res = await axios.get("http://localhost:8001/api/category");
             if (res.status === 200) {
                 setProductCategory(res.data.data);
             }
@@ -24,7 +24,7 @@ const AddProduct = () => {
 
     const getProductType = async () => {
         try {
-            const res = await axios.get("https://api.zenshealthcare.co.in/api/product-category");
+            const res = await axios.get("http://localhost:8001/api/product-category");
             if (res.status === 200) {
                 setProductType(res.data);
             }
@@ -101,7 +101,7 @@ const AddProduct = () => {
                 }
             }
 
-            const response = await axios.post('https://api.zenshealthcare.co.in/api/products', form, {
+            const response = await axios.post('http://localhost:8001/api/products', form, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },

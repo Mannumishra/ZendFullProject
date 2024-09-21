@@ -13,7 +13,7 @@ const Product = () => {
     // Fetch API data
     const getApiData = async () => {
         try {
-            const res = await axios.get("https://api.zenshealthcare.co.in/api/category");
+            const res = await axios.get("http://localhost:8001/api/category");
             if (res.status === 200) {
                 setProducts(res.data.data);
                 if (res.data.data.length <= 4) {
@@ -109,7 +109,7 @@ const Product = () => {
                             <div className="row g-4">
                                 {filterData.slice(0, visibleProducts).map((item, index) => (
                                     <div className="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s" key={index}>
-                                        <Link to="/product">
+                                        <Link to={`/product/category/${item.name}`}>
                                             <div className="product-item text-center border h-100 p-4">
                                                 <img className="img-fluid mb-4" src={item.image} alt={item.name} />
                                                 <a href="" className="h6 d-inline-block mb-2">{item.name}</a>
@@ -121,7 +121,7 @@ const Product = () => {
                                                     <small className="fa fa-star text-warning"></small>
                                                     <small>(99)</small>
                                                 </div>
-                                                <Link className="btn btn-outline-primary px-3" to={`/product`}>See Details</Link>
+                                                <Link className="btn btn-outline-primary px-3" to={`/product/category/${item.name}`}>See Details</Link>
                                             </div>
                                         </Link>
                                     </div>

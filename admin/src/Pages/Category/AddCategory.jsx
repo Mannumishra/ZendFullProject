@@ -27,7 +27,7 @@ const AddCategory = () => {
         formData.append("image", data.image)
         setIsloding(true)
         try {
-            const res = await axios.post("https://api.zenshealthcare.co.in/api/category", formData)
+            const res = await axios.post("http://localhost:8001/api/category", formData)
             if (res.status === 200) {
                 setIsloding(false)
                 navigate("/all-category")

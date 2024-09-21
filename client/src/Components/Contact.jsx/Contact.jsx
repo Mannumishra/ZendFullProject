@@ -19,7 +19,7 @@ const Contact = () => {
     const postData = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post("https://api.zenshealthcare.co.in/api/contacts", data);
+            const res = await axios.post("http://localhost:8001/api/contacts", data);
             console.log(res);
             if (res.status === 200) {
                 toast.success(res.data.message);

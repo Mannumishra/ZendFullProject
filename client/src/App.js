@@ -31,6 +31,7 @@ import ForgetPassword from './Components/ForgetPassword/ForgetPassword';
 import ChangePassword from './Components/ChangePassword/ChangePassword';
 import OrderConfirmation from './Components/OrderConfirmation/OrderConfirmation';
 import BynameDetails from './Components/ProductDetails/BynameDetails';
+import CategoryProduct from './Components/CategoryProduct/CategoryProduct';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/product' element={<Product />} />
+          <Route path='/product/category/:categoryName' element={<CategoryProduct />} />
           <Route path='/shop' element={<Shop />} />
           <Route path='/details/:_id' element={<SinglePage />} />
           <Route path='/details/name/:_id' element={<BynameDetails />} />

@@ -8,7 +8,7 @@ const AllVoucher = () => {
     // Fetch all contacts data from API
     const getApiData = async () => {
         try {
-            const res = await axios.get("https://api.zenshealthcare.co.in/api/contacts");
+            const res = await axios.get("http://localhost:8001/api/contacts");
             console.log(res)
             if (res.status === 200) {
                 setData(res.data.contacts.reverse());
@@ -21,7 +21,7 @@ const AllVoucher = () => {
     // Delete a contact by id
     const deleteContact = async (id) => {
         try {
-            const res = await axios.delete(`https://api.zenshealthcare.co.in/api/contacts/${id}`);
+            const res = await axios.delete(`http://localhost:8001/api/contacts/${id}`);
             if (res.status === 200) {
                 alert("Contact deleted successfully!");
                 // Refresh data after deletion

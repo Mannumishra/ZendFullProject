@@ -29,13 +29,14 @@ schema
 
 const createUser = async (req, res) => {
     try {
+
         const { name, email, phone, password } = req.body;
         const errorMessage = [];
         if (!name) errorMessage.push("Name is required");
         if (!email) errorMessage.push("Email is required");
         if (!phone) errorMessage.push("Phone is required");
         if (!password) errorMessage.push("Password is required");
-        if (!req.file) errorMessage.push("Image is must required is required")
+        // if (!req.file) errorMessage.push("Image is must required is required")
         if (errorMessage.length > 0) {
             return res.status(400).json({
                 success: false,
@@ -56,17 +57,17 @@ const createUser = async (req, res) => {
             });
         }
         const hashedPassword = await bcrypt.hash(password, saltRounds);
-        let imageUrl = "";
-        if (req.file) {
-            imageUrl = await uploadImage(req.file.path)
-        }
-        fs.unlinkSync(req.file.path)
+        // let imageUrl = "";
+        // if (req.file) {
+        //     imageUrl = await uploadImage(req.file.path)
+        // }
+        // fs.unlinkSync(req.file.path)
         const data = new User({
             name,
             email,
             phone,
             password: hashedPassword,
-            image: imageUrl
+            // image: imageUrl
         });
         await data.save();
         // Prepare user email template with a simple success message
@@ -120,6 +121,7 @@ const createUser = async (req, res) => {
             data,
         });
     } catch (error) {
+        console.log(error)
         return res.status(500).json({
             success: false,
             message: "Internal Server Error",
@@ -197,12 +199,22 @@ const updateUser = async (req, res) => {
         }
         let imageUrl = data.image;
         if (req.file) {
-            const oldimage = getPublicIdFromUrl(imageUrl)
-            await deleteImage(oldimage);
+            if (data.image) {
+                const oldimage = getPublicIdFromUrl(imageUrl)
+                await deleteImage(oldimage);
+            }
             imageUrl = await uploadImage(req.file.path);
             fs.unlinkSync(req.file.path)
         }
-        const updateUser = await User.findByIdAndUpdate(id, { name, email, phone, address, city, state, pin, image: imageUrl }, { new: true })
+
+          // Only include `pin` in the update if it's provided
+          const updatedFields = { name, email, phone, address, city, state, image: imageUrl };
+          // Only include `pin` if it's defined and valid
+        if (pin && !isNaN(pin)) {
+            updatedFields.pin = Number(pin);
+        }
+
+        const updateUser = await User.findByIdAndUpdate(id, updatedFields, { new: true })
         return res.status(200).json({
             success: true,
             message: "User Profile Update Successfully",
