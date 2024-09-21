@@ -58,7 +58,7 @@ const PrivacyPolicy = () => {
           <br />
           Zens Health Care
           <br />
-          [Your Company Address]
+          SHOP NO-10 GROUND FLOOR PROPERTY NO B-5,DDA MARKET,YAMUNA VIHAR DELHI-110053
         </p>
       </div>
     </div>
