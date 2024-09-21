@@ -72,7 +72,7 @@ const Feauture = () => {
             <div class="container-fluid py-5">
                 <div class="container">
                     <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style={{ maxWidth: "600px" }}>
-                        <h1 class="text-primary mb-3"><span class="fw-light text-dark">Best Benefits Of Our</span> High-Quality Medicine</h1>
+                        <h1 class="text-primary mb-3"><span class="fw-light text-dark">Best Benefits Of Our</span> High-Quality Products</h1>
                         <p class="mb-5">Our high-quality medicine offers the best benefits by providing effective relief with scientifically proven ingredients, ensuring safety, and promoting overall health.</p>
                     </div>
                     <div class="row g-4 align-items-center">

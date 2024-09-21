@@ -44,55 +44,55 @@ const Blog = () => {
             <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
                 <div class="blog-item border h-100 p-4">
                     <img class="img-fluid mb-4" src={image1} alt=""/>
-                    <a href="" class="h5 lh-base d-inline-block">Innovative Solutions for Global Health Challenges</a>
+                    <p class="h5 lh-base d-inline-block">Innovative Solutions for Global Health Challenges</p>
                     <div class="d-flex text-black-50 mb-2">
-                        <div class="pe-3">
+                        {/* <div class="pe-3">
                             <small class="fa fa-eye me-1"></small>
                             <small>9999 Views</small>
                         </div>
                         <div class="pe-3">
                             <small class="fa fa-comments me-1"></small>
                             <small>9999 Comments</small>
-                        </div>
+                        </div> */}
                     </div>
                     <p class="mb-4">Discover how Zens Health Care is developing innovative pharmaceutical solutions to tackle global health issues, offering new hope to patients worldwide with cutting-edge therapies and medications.</p>
-                    <a href="" class="btn btn-outline-primary px-3">Read More</a>
+                    {/* <a href="" class="btn btn-outline-primary px-3">Read More</a> */}
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
                 <div class="blog-item border h-100 p-4">
                     <img class="img-fluid mb-4" src={image2} alt=""/>
-                    <a href="" class="h5 lh-base d-inline-block">The Importance of Preventive Medicine in Modern Healthcare</a>
+                    <p class="h5 lh-base d-inline-block">The Importance of Preventive Medicine in Modern Healthcare</p>
                     <div class="d-flex text-black-50 mb-2">
-                        <div class="pe-3">
+                        {/* <div class="pe-3">
                             <small class="fa fa-eye me-1"></small>
                             <small>9999 Views</small>
                         </div>
                         <div class="pe-3">
                             <small class="fa fa-comments me-1"></small>
                             <small>9999 Comments</small>
-                        </div>
+                        </div> */}
                     </div>
                     <p class="mb-4">Preventive medicine plays a critical role in maintaining long-term health. Learn how regular health check-ups, vaccinations, and lifestyle choices contribute to disease prevention and better well-being.</p>
-                    <a href="" class="btn btn-outline-primary px-3">Read More</a>
+                    {/* <a href="" class="btn btn-outline-primary px-3">Read More</a> */}
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.5s">
                 <div class="blog-item border h-100 p-4">
                     <img class="img-fluid mb-4" src={image3} alt=""/>
-                    <a href="" class="h5 lh-base d-inline-block">Maximizing the Benefits of Our Medications</a>
+                    <p class="h5 lh-base d-inline-block">Maximizing the Benefits of Our Medications</p>
                     <div class="d-flex text-black-50 mb-2">
-                        <div class="pe-3">
+                        {/* <div class="pe-3">
                             <small class="fa fa-eye me-1"></small>
                             <small>9999 Views</small>
                         </div>
                         <div class="pe-3">
                             <small class="fa fa-comments me-1"></small>
                             <small>9999 Comments</small>
-                        </div>
+                        </div> */}
                     </div>
                     <p class="mb-4">Find out how to get the most out of Zens Health Care’s pharmaceutical products. From proper dosage to understanding potential interactions, this guide helps you use our medications safely and effectively.</p>
-                    <a href="" class="btn btn-outline-primary px-3">Read More</a>
+                    {/* <a href="" class="btn btn-outline-primary px-3">Read More</a> */}
                 </div>
             </div>
         </div>

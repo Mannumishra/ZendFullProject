@@ -1,7 +1,25 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
+
+    const [data, setData] = useState([])
+
+    const getApiData = async () => {
+        try {
+            const res = await axios.get("http://localhost:8001/api/category");
+            if (res.status === 200) {
+                setData(res.data.data);
+            }
+        } catch (error) {
+            console.error("Error fetching products:", error);
+        }
+    };
+
+    useEffect(() => {
+        getApiData();
+    }, []);
     return (
         <>
             {/* <!-- Footer Start --> */}
@@ -9,9 +27,9 @@ const Footer = () => {
                 <div className="container py-5">
                     <div className="row g-5">
                         <div className="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
-                            <a href="index.html" className="d-inline-block mb-3">
-                                <h1 className="text-primary">ZENS</h1>
-                            </a>
+                            <Link to="/" className="d-inline-block mb-3">
+                                <h1 className="text-primary">ZENS Health Care</h1>
+                            </Link>
                             <p className="mb-0">Welcome to Zens Health Care!
                                 A leader in pharmaceutical innovation dedicated to improving global health and well-being. We are committed to delivering high-quality, effective, and accessible medications to patients worldwide.</p>
                         </div>
@@ -29,11 +47,11 @@ const Footer = () => {
                         </div>
                         <div className="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
                             <h5 className="mb-4">Our Category</h5>
-                            <Link className="btn btn-link" to="/product">Facewash</Link>
-                            <Link className="btn btn-link" to="/product">Homeopathy</Link>
-                            <Link className="btn btn-link" to="/product">Anti Biotic Range</Link>
-                            <Link className="btn btn-link" to="/product">Proton Pump Inhibitor Range</Link>
-                            {/* <a className="btn btn-link" href="">Herbal Sleep Aid</a> */}
+                            {
+                                data.map((item, index) =>
+                                    <Link className="btn btn-link" to={`/product/category/${item.name}`}>{item.name}</Link>
+                                )
+                            }
                         </div>
                         <div className="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
                             <h5 className="mb-4">Popular Link</h5>
