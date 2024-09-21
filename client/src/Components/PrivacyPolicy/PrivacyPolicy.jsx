@@ -10,6 +10,7 @@ const PrivacyPolicy = () => {
   }, []);
 
   return (
+   <>
     <div className="privacy-policy-container">
       <div className="header">
         <h1>Privacy Policy for Zens Health Care</h1>
@@ -61,6 +62,8 @@ const PrivacyPolicy = () => {
         </p>
       </div>
     </div>
+    <hr />
+   </>
   );
 };
 

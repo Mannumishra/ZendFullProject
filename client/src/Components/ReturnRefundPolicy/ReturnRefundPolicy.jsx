@@ -10,6 +10,7 @@ const ReturnAndRefundPolicy = () => {
   }, []);
 
   return (
+   <>
     <div className="return-refund-policy-container">
       <div className="header">
         <h1>Return & Refund Policy for Zens Health Care</h1>
@@ -23,23 +24,23 @@ const ReturnAndRefundPolicy = () => {
       </div>
 
       <div className="section">
-        <h2>Returns</h2>
+        <h2>Returns & Refunds</h2>
         <p>
-          You have 30 calendar days to return an item from the date you received it. To be eligible for a return, your item must be unused and in the same condition that you received it. Your item must be in the original packaging.
+          We do not have a return policy for most products. However, returns are only valid if you receive the wrong product. Once the incorrect product is received back, we will initiate your refund within 7 working days, credited to your respective bank account.
         </p>
       </div>
 
-      <div className="section">
+      {/* <div className="section">
         <h2>Refunds</h2>
         <p>
           Once we receive your item, we will inspect it and notify you that we have received your returned item. We will immediately notify you on the status of your refund after inspecting the item. If your return is approved, we will initiate a refund to your original method of payment. You will receive the credit within a certain number of days, depending on your card issuer's policies.
         </p>
-      </div>
+      </div> */}
 
       <div className="section">
         <h2>Shipping</h2>
         <p>
-          You will be responsible for paying for your own shipping costs for returning your item. Shipping costs are non-refundable. If you receive a refund, the cost of return shipping will be deducted from your refund.
+          All Product Will Deliver within 7 Working days.By Recpective Delivery Partner.
         </p>
       </div>
 
@@ -50,6 +51,8 @@ const ReturnAndRefundPolicy = () => {
         </p>
       </div>
     </div>
+    <hr />
+   </>
   );
 };
 

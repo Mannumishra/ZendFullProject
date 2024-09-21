@@ -10,6 +10,7 @@ const TermsAndConditions = () => {
   }, []);
 
   return (
+    <>
     <div className="terms-conditions-container">
       <div className="header">
         <h1>Terms and Conditions for Zens Health Care</h1>
@@ -64,6 +65,8 @@ const TermsAndConditions = () => {
         </p>
       </div>
     </div>
+    <hr />
+    </>
   );
 };
 
