@@ -24,7 +24,7 @@ const ChangePassword = () => {
         }
 
         try {
-            const res = await axios.post("http://localhost:8001/api/user/chnage-password", { email: email, currentPassword: currentPassword, newPassword: newPassword })
+            const res = await axios.post("https://api.zenshealthcare.co.in/api/user/chnage-password", { email: email, currentPassword: currentPassword, newPassword: newPassword })
             console.log(res);
             setSuccess('Password changed successfully');
             navigate("/profile")

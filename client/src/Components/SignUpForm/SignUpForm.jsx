@@ -38,7 +38,7 @@ const SignUpForm = () => {
                 formData.append("password", data.password);
                 // formData.append("image", data.image); // Add image file if needed
 
-                const res = await axios.post("http://localhost:8001/api/user", formData, {
+                const res = await axios.post("https://api.zenshealthcare.co.in/api/user", formData, {
                     headers: {
                         "Content-Type": "multipart/form-data",
                     },

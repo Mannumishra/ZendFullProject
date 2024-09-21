@@ -14,7 +14,7 @@ const AddTag = () => {
         setIsLoading(true);
         console.log(productCategoryname)
         try {
-            const res = await axios.post("http://localhost:8001/api/product-category", { productCategoryname });
+            const res = await axios.post("https://api.zenshealthcare.co.in/api/product-category", { productCategoryname });
             if (res.status === 200) {
                 toast.success(res.data.message);
                 navigate("/all-productCategory");

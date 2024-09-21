@@ -18,7 +18,7 @@ const BynameDetails = () => {
 
     const getsingleProductData = async () => {
         try {
-            let res = await axios.get(`http://localhost:8001/api/products/name/${_id}`);
+            let res = await axios.get(`https://api.zenshealthcare.co.in/api/products/name/${_id}`);
             console.log(res);
             setSingleData(res.data.data);
             if (res.data.data.productImage && Array.isArray(res.data.data.productImage)) {

@@ -13,7 +13,7 @@ const Product = () => {
     // Fetch API data
     const getApiData = async () => {
         try {
-            const res = await axios.get("http://localhost:8001/api/category");
+            const res = await axios.get("https://api.zenshealthcare.co.in/api/category");
             if (res.status === 200) {
                 setProducts(res.data.data);
                 if (res.data.data.length <= 4) {

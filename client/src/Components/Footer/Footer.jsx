@@ -8,7 +8,7 @@ const Footer = () => {
 
     const getApiData = async () => {
         try {
-            const res = await axios.get("http://localhost:8001/api/category");
+            const res = await axios.get("https://api.zenshealthcare.co.in/api/category");
             if (res.status === 200) {
                 setData(res.data.data);
             }
