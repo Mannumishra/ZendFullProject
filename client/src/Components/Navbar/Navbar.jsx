@@ -42,7 +42,7 @@ const Navbar = () => {
             <div className={`collapse navbar-collapse ${isNavbarOpen ? 'show' : ''}`} id="navbarCollapse">
               <div className="navbar-nav ms-auto">
                 <Link to="/" className="nav-item nav-link active headertext-dark" onClick={handleLinkClick}>Home</Link>
-                <Link to="/product" className="nav-item nav-link" onClick={handleLinkClick}>Products</Link>
+                {/* <Link to="/product" className="nav-item nav-link" onClick={handleLinkClick}>Products</Link> */}
                 <Link to="/shop" className="nav-item nav-link" onClick={handleLinkClick}>Shop</Link>
                 <Link to="/feature" className="nav-item nav-link" onClick={handleLinkClick}>Features</Link>
                 <Link to="/contact" className="nav-item nav-link" onClick={handleLinkClick}>Contact</Link>

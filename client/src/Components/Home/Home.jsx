@@ -20,7 +20,7 @@ const Home = () => {
       {/* <DealStart /> */}
       <Feauture />
       
-      <Category />
+      {/* <Category /> */}
       {/* <HowToUse /> */}
       {/* <Product /> */}
       {/* <Testimonial /> */}
