@@ -39,10 +39,10 @@ const Footer = () => {
                             <p><i className="fa fa-phone-alt me-3"></i>+91 95555 55122</p>
                             <p><i className="fa fa-envelope me-3"></i>Zenshealthcare@gmail.com</p>
                             <div className="d-flex pt-2">
-                                <a className="btn btn-square btn-outline-primary me-1" href=""><i className="fab fa-twitter"></i></a>
-                                <a className="btn btn-square btn-outline-primary me-1" href=""><i className="fab fa-facebook-f"></i></a>
-                                <a className="btn btn-square btn-outline-primary me-1" href=""><i className="fab fa-instagram"></i></a>
-                                <a className="btn btn-square btn-outline-primary me-1" href=""><i className="fab fa-linkedin-in"></i></a>
+                                {/* <a className="btn btn-square btn-outline-primary me-1" href=""><i className="fab fa-twitter"></i></a> */}
+                                <a className="btn btn-square btn-outline-primary me-1" href="https://www.facebook.com/profile.php?id=100071398667798&mibextid=LQQJ4d" target='_blank'><i className="fab fa-facebook-f"></i></a>
+                                <a className="btn btn-square btn-outline-primary me-1" href="https://www.instagram.com/zenshealthcare/?igsh=ZTNmZ3c4c2NjMW1l&utm_source=qr" target='_blank'><i className="fab fa-instagram"></i></a>
+                                {/* <a className="btn btn-square btn-outline-primary me-1" href=""><i className="fab fa-linkedin-in"></i></a> */}
                             </div>
                         </div>
                         <div className="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
